@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaPay — Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#0d0f14] text-[#e8eaf0] font-sans antialiased">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+
+    <div class="layout-wrapper">
+      <label for="nav-toggle" class="overlay" aria-hidden="true"></label>
+
+      <aside class="sidebar">
+        <div
+          class="flex items-center gap-3 px-5 py-5 border-b border-[#252a38]"
+        >
+          <div class="logo-icon">N</div>
+          <span class="text-[15px] font-semibold tracking-tight">
+            Nova<span class="text-[#00e5a0]">Pay</span>
+          </span>
+        </div>
+
+        <nav class="flex-1 px-3 py-5 flex flex-col gap-1">
+          <p class="nav-section-label">Principal</p>
+
+          <a href="#" class="nav-item nav-item--active">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+            Dashboard
+          </a>
+
+          <a href="#" class="nav-item">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            Transações
+          </a>
+
+          <a href="#" class="nav-item">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <rect x="2" y="5" width="20" height="14" rx="2" />
+              <path d="M2 10h20" />
+            </svg>
+            Cartões
+          </a>
+
+          <p class="nav-section-label mt-5">Gestão</p>
+
+          <a href="#" class="nav-item">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>
+            Orçamento
+          </a>
+
+          <a href="#" class="nav-item">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+            Transações
+          </a>
+        </nav>
+
+        <div
+          class="flex items-center gap-3 px-4 py-4 border-t border-[#252a38]"
+        >
+          <div class="user-avatar">MF</div>
+          <div class="min-w-0">
+            <p class="text-[13px] font-medium truncate">Marcos Ferreira</p>
+            <p class="text-[10px] text-[#525a72]">Pro Plan</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="flex flex-col flex-1 min-w-0">
+        <header class="topbar">
+          <label for="nav-toggle" class="menu-btn" aria-label="Abrir menu">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <div class="flex items-center gap-2">
+            <div class="logo-icon logo-icon--sm">N</div>
+            <span class="text-[14px] font-semibold"
+              >Nova<span class="text-[#00e5a0]">Pay</span></span
+            >
+          </div>
+        </header>
+
+        <main class="flex-1 p-6 md:p-8 overflow-auto">
+          <div class="flex items-start justify-between mb-7">
+            <div>
+              <h1 class="text-2xl font-bold tracking-tight">Dashboard</h1>
+              <p class="text-[13px] text-[#8890a4] mt-0.5">Visão Geral</p>
+            </div>
+            <span class="text-[13px] text-[#8890a4] pt-1 hidden sm:block"
+              >Abril 2026</span
+            >
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-5"
+          >
+            <div class="kpi-card">
+              <div class="flex items-start justify-between mb-3">
+                <span class="kpi-label">Saldo Total</span>
+                <div class="kpi-icon kpi-icon--amber">
+                  <svg
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <path d="M2 10h20" />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-[26px] font-bold tracking-tight">R$ 24.380</p>
+              <p class="kpi-change kpi-change--up mt-1.5">
+                <svg
+                  width="10"
+                  height="10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 17l9.2-9.2M17 17V7H7" />
+                </svg>
+                8,3% este mês
+              </p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="flex items-start justify-between mb-3">
+                <span class="kpi-label">Receitas</span>
+                <div class="kpi-icon kpi-icon--violet">
+                  <svg
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M23 6l-9.5 9.5-5-5L1 18" />
+                    <path d="M17 6h6v6" />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-[26px] font-bold tracking-tight">R$ 8.650</p>
+              <p class="kpi-change kpi-change--up mt-1.5">
+                <svg
+                  width="10"
+                  height="10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 17l9.2-9.2M17 17V7H7" />
+                </svg>
+                12,1% vs mês ant.
+              </p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="flex items-start justify-between mb-3">
+                <span class="kpi-label">Despesas</span>
+                <div class="kpi-icon kpi-icon--red">
+                  <svg
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M23 18l-9.5-9.5-5 5L1 6" />
+                    <path d="M17 18h6v-6" />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-[26px] font-bold tracking-tight">R$ 4.210</p>
+              <p class="kpi-change kpi-change--down mt-1.5">
+                <svg
+                  width="10"
+                  height="10"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7 7l9.2 9.2M17 7v10H7" />
+                </svg>
+                3,7% vs mês ant.
+              </p>
+            </div>
+
+            <div class="kpi-card">
+              <div class="flex items-start justify-between mb-3">
+                <span class="kpi-label">Meta de Economia</span>
+                <div class="kpi-icon kpi-icon--violet">
+                  <svg
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-[26px] font-bold tracking-tight">72%</p>
+              <p class="kpi-change kpi-change--up mt-1.5">Meta: R$ 6.000</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+            <div class="lg:col-span-3 kpi-card">
+              <div
+                class="flex flex-wrap items-center justify-between gap-3 mb-5"
+              >
+                <h2 class="text-[14px] font-semibold">Fluxo de Caixa</h2>
+                <div class="flex items-center gap-3 flex-wrap">
+                  <span
+                    class="flex items-center gap-1.5 text-[11px] text-[#8890a4]"
+                  >
+                    <span
+                      class="inline-block w-2.5 h-2.5 rounded-full bg-[#00e5a0]"
+                    ></span
+                    >Receitas
+                  </span>
+                  <span
+                    class="flex items-center gap-1.5 text-[11px] text-[#8890a4]"
+                  >
+                    <span
+                      class="inline-block w-2.5 h-2.5 rounded-full bg-[#7c6ff7]"
+                    ></span
+                    >Despesas
+                  </span>
+                  <div class="hidden sm:flex items-center gap-0.5">
+                    <span class="period-btn">3M</span>
+                    <span class="period-btn">6M</span>
+                    <span class="period-btn period-btn--active">1A</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chart-body">
+                <div class="bar-group">
+                  <div class="bar-pair">
+                    <div class="bar bar--green bar-nov-rec"></div>
+                    <div class="bar bar--violet bar-nov-des"></div>
+                  </div>
+                  <span class="bar-label">Nov</span>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-pair">
+                    <div class="bar bar--green bar-dez-rec"></div>
+                    <div class="bar bar--violet bar-dez-des"></div>
+                  </div>
+                  <span class="bar-label">Dez</span>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-pair">
+                    <div class="bar bar--green bar-jan-rec"></div>
+                    <div class="bar bar--violet bar-jan-des"></div>
+                  </div>
+                  <span class="bar-label">Jan</span>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-pair">
+                    <div class="bar bar--green bar-fev-rec"></div>
+                    <div class="bar bar--violet bar-fev-des"></div>
+                  </div>
+                  <span class="bar-label">Fev</span>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-pair">
+                    <div class="bar bar--green bar-mar-rec"></div>
+                    <div class="bar bar--violet bar-mar-des"></div>
+                  </div>
+                  <span class="bar-label">Mar</span>
+                </div>
+                <div class="bar-group">
+                  <div class="bar-pair">
+                    <div class="bar bar--green bar-abr-rec"></div>
+                    <div class="bar bar--violet bar-abr-des"></div>
+                  </div>
+                  <span class="bar-label">Abr</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-2 kpi-card">
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-[14px] font-semibold">Últimas Transações</h2>
+                <a href="#" class="text-[11px] text-[#00e5a0] hover:underline"
+                  >Ver todas →</a
+                >
+              </div>
+
+              <ul class="flex flex-col gap-1">
+                <li class="tx-item">
+                  <div class="tx-icon tx-icon--green">
+                    <svg
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect x="2" y="5" width="20" height="14" rx="2" />
+                      <path d="M2 10h20" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-medium truncate">
+                      Salário Recebido
+                    </p>
+                    <p class="text-[10px] text-[#525a72]">28 Abr · Crédito</p>
+                  </div>
+                  <span
+                    class="text-[12px] font-semibold text-[#00e5a0] shrink-0"
+                    >+R$ 5.200</span
+                  >
+                </li>
+
+                <li class="tx-item">
+                  <div class="tx-icon tx-icon--red">
+                    <svg
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                      />
+                      <line x1="3" y1="6" x2="21" y2="6" />
+                      <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-medium truncate">
+                      Supermercado Ex...
+                    </p>
+                    <p class="text-[10px] text-[#525a72]">27 Abr · Débito</p>
+                  </div>
+                  <span
+                    class="text-[12px] font-semibold text-[#f04060] shrink-0"
+                    >-R$ 347,80</span
+                  >
+                </li>
+
+                <li class="tx-item">
+                  <div class="tx-icon tx-icon--amber">
+                    <svg
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-medium truncate">
+                      Conta de Luz — C...
+                    </p>
+                    <p class="text-[10px] text-[#525a72]">
+                      26 Abr · Débito Auto.
+                    </p>
+                  </div>
+                  <span
+                    class="text-[12px] font-semibold text-[#f04060] shrink-0"
+                    >-R$ 182,40</span
+                  >
+                </li>
+
+                <li class="tx-item">
+                  <div class="tx-icon tx-icon--red">
+                    <svg
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="3" />
+                      <path d="M8 5v14l8-7-8-7z" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-medium truncate">
+                      Netflix Assinatura
+                    </p>
+                    <p class="text-[10px] text-[#525a72]">
+                      25 Abr · Débito Auto.
+                    </p>
+                  </div>
+                  <span
+                    class="text-[12px] font-semibold text-[#f04060] shrink-0"
+                    >-R$ 55,90</span
+                  >
+                </li>
+
+                <li class="tx-item">
+                  <div class="tx-icon tx-icon--violet">
+                    <svg
+                      width="14"
+                      height="14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <path d="M9 9h6M9 12h6M9 15h4" />
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-[12px] font-medium truncate">
+                      Freelance Design
+                    </p>
+                    <p class="text-[10px] text-[#525a72]">
+                      24 Abr · Crédito PIX
+                    </p>
+                  </div>
+                  <span
+                    class="text-[12px] font-semibold text-[#00e5a0] shrink-0"
+                    >+R$ 1.800</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
